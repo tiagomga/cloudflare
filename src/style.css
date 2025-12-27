@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 * {
@@ -13,7 +14,6 @@ body {
   color: #333;
   background-color: #f9f9f9;
   width: 100vw;
-  overflow-x: hidden;
 }
 
 h2 {
@@ -57,7 +57,7 @@ h2 {
   background-color: rgb(232, 232, 232);
 }
 
-.navbar a:active {
+.navbar a:active, .navbar a:visited {
   color: rgba(0, 0, 0, 1);
 }
 
@@ -215,4 +215,50 @@ h2 {
 .contacts a, .contacts a:visited {
   color: white;
   text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  html {
+    width: 100vw;
+  }
+
+  #current-image {
+    min-width: 400px;
+    max-width: 450px;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .navbar {
+    justify-content: center;
+  }
+
+  .hero-content > img {
+    display: none;
+  }
+
+  .services-description {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .services-description ul {
+    width: 100vw;
+  }
+
+  .services-description img {
+    justify-self: start;
+  }
+
+  .wrapper {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .contact {
+    height: 150vh;
+  }
 }
